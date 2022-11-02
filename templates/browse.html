@@ -1,0 +1,24 @@
+<style>
+    h1{text-align: center;}
+
+    div{
+        border: solid;
+        background-color: wheat;
+        text-align: center;
+        font-size: xx-large;
+    }
+</style>
+{% extends "base.html" %} {% block content %} 
+<h1>browse Blogs</h1>
+{% for blogs in blg %}
+<div>
+  <br />
+  title:{{blogs.title}}
+  <br />
+  author:{{blogs.author}}
+  <form action="viewblog">
+    <input type="hidden" name="blogid" value="{{blogs.id}}">
+    <input type="submit" value="view">
+  </form>
+</div>
+{% endfor %} {% endblock content %}

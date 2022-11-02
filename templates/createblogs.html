@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block content %}
+<form action="/blog/submitblog">
+    title:<input name="title" type="text">
+    <br>
+    text:<input name="text" type="text">
+    <br>
+    author:<input name="author" type="text">
+    <input type='submit'>
+</form>
+ {% endblock content %}
